@@ -21,19 +21,23 @@
             </thead>
             <tbody>
                     <% 
-                        String str;
-                        String[] strArr = {};
+                        String str0 = request.getParameter("data0");
+                        String str1 = request.getParameter("data1");
+                        String str2 = request.getParameter("data2");
+                        String str3 = request.getParameter("data3");
+                        String str4 = request.getParameter("data4");
+                        if(str0 == null){str0 = "";}
+                        if(str1 == null){str1 = "";}
+                        if(str2 == null){str2 = "";}
+                        if(str3 == null){str3 = "";}
+                        if(str4 == null){str4 = "";}
+                        out.print(str0);
+                        out.print(str1);
+                        out.print(str2);
+                        out.print(str3);
+                        out.print(str4);
+                        
                     %>
-                    
-                    <% str = request.getParameter("data0"); 
-                    if(str != null){
-                    strArr = str.split(",", 2);
-                    }
-                    %>
-                    <tr>
-                        <td><%= strArr[0] %></td>
-                        <td><%= strArr[1] %></td>
-                    </tr>
 
             </tbody>
         </table>
